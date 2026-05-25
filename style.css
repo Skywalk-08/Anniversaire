@@ -219,11 +219,12 @@ span.cat {
 }
 
 .container-letter p {
-    font-size: 1.85rem;
+    font-size: 2rem;
     line-height: 1.8;
     margin-bottom: 10px;
     color: #d6ecff;
 }
+
 
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
