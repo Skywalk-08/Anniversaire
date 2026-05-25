@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    background: linear-gradient(-45deg, #fee9f7, #e8f5fe, #fef2e8, #f0ffe8);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+
+    padding: 50px 35px;
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 8px 40px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(0, 180, 255, 0.1);
+
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.cat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 80px;
+    height: 80px;
+
+    background-size: cover;
+    background-position: center;
+
+    z-index: 100;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 3vw, 3rem);
+
+    color: #1f2a44; 
+
+    text-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.25);
+
+    margin-bottom: 25px;
+
+    line-height: 1.3;
+
+    opacity: 1 !important;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    line-height: 1;
+}
+
+.title h1 {
+    margin: 0;
+} 
+
+span.cat {
+    width: 90px;
+    height: 90px;
+
+    background-image: url("images/miaou3.png");
+    background-size: cover;
+    background-position: center;
+
+    display: inline-block;
+
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+    transform: translateY(30px);
+}
+
+.souhait {
+    font-size: clamp(1.75rem, 1.8vw, 1.4rem);
+
+    color: #2b3b5c;
+
+    margin-bottom: 35px;
+
+    line-height: 1.6;
+
+    min-height: 60px;
+
+    padding: 0 10px;
+
+    text-shadow:
+        0 1px 6px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button {
+    padding: 15px 35px;
+
+    font-size: 1.1rem;
+
+    background: linear-gradient(45deg,
+        #1e3c72,
+        #2a5298);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 50px;
+
+    color: white;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 20px rgba(0, 180, 255, 0.2);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    opacity: 1 !important;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 30px rgba(0, 180, 255, 0.4);
+}
+
+.floating {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.envelope {
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(127, 208, 255, 0.2));
+}
+
+.cat-bottom {
+    bottom: 15px;
+    right: 15px;
+
+    background-image: url("images/miaou2.png");
+}
+
+.cat-top {
+    top: 15px;
+    left: 15px;
+
+    background-image: url("images/miaou4.png");
+}
+
+.container-letter {
+    max-width: 700px;
+
+    padding: 50px 35px;
+    border-radius: 30px;
+
+    background-image: url('images/lettre.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.5);
+
+    text-align: center;
+    z-index: 2;
+
+    font-family: 'Dancing Script', cursive;
+}
+
+.container-letter::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 20, 40, 0.55);
+    border-radius: 30px;
+    z-index: 0;
+}
+
+.container-letter * {
+    position: relative;
+    z-index: 1;
+}
+
+.container-letter h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #cfe9ff;
+}
+
+.container-letter p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    color: #d6ecff;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 35px 20px;
+        border-radius: 25px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    .souhait {
+        margin-bottom: 30px;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .container-letter {
+        padding: 35px 20px;
+    }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>L'anniversaire de mon Babychouu ❤️</title>
+  <link href='style.css' rel='stylesheet'>
+  <script src="js/gsap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Joyeux anniversaiiiiiire</h1>
+    <h1 class="title">
+      My Babychouuuuu ❤️
+      <span class="cat" id="cat"></span>
+    </h1>
+    <br>
+    <div class="souhait"></div>
+    <button class="cta-button">A little thing for youu🎁</button>
+    <div class="cat" id="cat"></div>
+  </div>
+   <script src="js/script.js"></script>
+
+   <script>
+    gsap.to("#cat", {
+    y: -8,
+    duration: 1,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut"
+});
+   </script>
+</body>
+</html>
