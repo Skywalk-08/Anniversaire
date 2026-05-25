@@ -1,4 +1,4 @@
-const souhaitText = "Merci d'être toi, I love you soo muuuuch 💖";
+const souhaitText = "Happy Youuuuu, I love you soo muuuuch 💖";
 const souhaitElement = document.querySelector('.souhait');
 let charIndex = 0;
 
